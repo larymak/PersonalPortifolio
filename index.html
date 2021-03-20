@@ -7,6 +7,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="default.css">
 	<link id="theme-style" rel="stylesheet" type="text/css" href="">
 </head>
@@ -27,12 +28,13 @@
 
 				</div>
 				<ul id="navigation">
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="#about-me">About</a></li>
+					<li><a href="https://larymak.hashnode.dev/">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 			<div class="left-column">
-				<img id="profile-pik" src="images/post.jpg">
+				<img id="profile-pik" src="images/prof.png">
 				<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 
 				<div id="theme-option-wrapper">
@@ -64,17 +66,18 @@
 
 		<div class="about-wrapper">
 			<div class="about-me">
-				<h4>More About Me</h4>
+				<h4 id="about-me">More About Me</h4>
 
-				<p>I build Websites and management Systems for all kind of jobs</p>
+				<p>I am a Software Developer/Web Developer (Python, Django, WordPress, JavaScript)</p>
 
-				<p>As I continue to Build new systems and websites I also do Demos to interested clients in my work. I also offer Website Mantainance services</p>
+				<p>Coding on Python and dreaming on Python and AI. To help companies to build complex application and systems to serve a large group of users with python and modern technologies.
+					I also do UI/UX design for both websites and mobile Apps, Website Mantainance and rebuilding of website.</p>
 
 				<hr>
 
 				<h4>TOP EXPERTISE</h4>
 
-				<p>FullStack Developer with primary focus on Django + React:<a target="_blank" href="resume.pdf">Download Resume</a></p>
+				<p>Developer with primary focus on Django + React:<a target="_blank" href="resume.pdf">Download Resume</a></p>
 				
 				<div id="skills">
 					<ul>
@@ -97,11 +100,13 @@
 			</div>
 
 			<div class="social-links">
-				<img id="social-image" src="images/late.png">
+				<img id="social-image" src="images/cover.png">
 				<h3>Find me on twitter & Youtube</h3>
-				<a target="_blank" href="#">YouTube: @LaryMak</a>
+				<a target="_blank" href="https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg">YouTube</a>
 				<br>
-				<a target="_blank" href="#">Twitter: @larymak1</a>
+				<a target="_blank" href="https://twitter.com/larymak1">Twitter</a>
+				<br>
+				<a target="_blank" href="https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/">LinkeIn</a>
 			</div>
 		</div>
 
@@ -110,16 +115,16 @@
 
 <section class="s1">
 	<div class="main-container">
-		<h3 style="text-align: center;">Some of My Past Projects</h3>
+		<h3 style="text-align: center;">Some of My Projects</h3>
 		<div class="post-wrapper">
 
 			<div>
 				<div class="post">
-					<img class="thumbnail" src="images/late.png">
+					<img class="thumbnail" src="images/virtual.jpg">
 					<div class="post-preview">
-						<h6 class="post-title">Post Title</h6>
-						<p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut</p>
+						<h6 class="post-title">Desktop Virtual Assistant</h6>
+						<p class="post-intro">Samaritan is a virtual assistant like siri and alexa. 
+							It is developed by the python language.</p>
 						<a href="post.html">Read More</a>
 					</div>
 				</div>
@@ -127,24 +132,25 @@
 
 			<div>
 				<div class="post">
-					<img class="thumbnail" src="images/late.png">
+					<img class="thumbnail" src="images/chat.jpeg">
 					<div class="post-preview">
-						<h6 class="post-title">Post Title</h6>
-						<p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut</p>
-						<a href="#">Read More</a>
+						<h6 class="post-title">Chat Bot</h6>
+						<p class="post-intro">Bored and need a partner to chat with? I got an AI Chatbot for you							
+							created by python</p>
+						<a href="https://github.com/larymak/chatbot/tree/master">Read More</a>
 					</div>
 				</div>
 			</div>
 
 			<div>
 				<div class="post">
-					<img class="thumbnail" src="images/late.png">
+					<img class="thumbnail" src="images/ecom.png">
 					<div class="post-preview">
-						<h6 class="post-title">Post Title</h6>
-						<p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut.</p>
-						<a href="#">Read More</a>
+						<h6 class="post-title">Django Ecom Website</h6>
+						<p class="post-intro">A Django E-Comm site made by Python and the Django with all
+							features of a shopping website.
+						</p>
+						<a href="https://github.com/larymak/Django-Ecom-Website">Read More</a>
 					</div>
 				</div>
 			</div>
@@ -154,17 +160,17 @@
 
 <section class="s2">
 	<div class="main-container">
-		<h3 style="text-align: center;">Get in Touch</h3>
+		<h3 id="contact" style="text-align: center;">Get in Touch</h3>
 
-		<form id="contact-form">
+		<form id="contact-form" action="https://formsubmit.co/larymak4@gmail.com" method="POST">
 			<label>Name</label>
-			<input class="input-field" type="text" name="name">
+			<input class="input-field" type="text" name="name" required>
 
 			<label>Subject</label>
 			<input class="input-field" type="text" name="subject">
 
 			<label>Email</label>
-			<input class="input-field" type="text" name="email">
+			<input class="input-field" type="text" name="email" required>
 
 			<label>Message</label>
 			<textarea class="input-field" name="name"></textarea>
@@ -174,6 +180,25 @@
 	</div>
 </section>
 
+<section class="s2">
+	<div class="footer-basic">
+		<footer>
+			<div class="social">
+				<a target="_blank" href="https://www.instagram.com/nextgencoders/"><i class="fa fa-instagram"></i></a>
+				<a target="_blank" href="https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/"><i class="fa fa-linkedin"></i></a>
+				<a target="_blank" href="https://twitter.com/larymak1"><i class="fa fa-twitter"></i></a>
+				<a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+			</div>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="https://www.freecodecamp.org/news/author/larymak/">Freecode Camp</a></li>
+				<li class="list-inline-item"><a href="https://github.com/larymak">GitHub</a></li>
+				<li class="list-inline-item"><a href="https://larymak.hashnode.dev/">Blog</a></li>				
+				<li class="list-inline-item"><a href="https://dev.to/larymak">Dev</a></li>
+			</ul>
+			<p class="copyright">NextGen Coders © 2021</p>
+		</footer>
+	</div>
+</section>
 <script type="text/javascript" src="script.js"></script>
 
 </body>
