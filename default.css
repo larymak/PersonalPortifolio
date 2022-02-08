@@ -309,6 +309,9 @@ h6{font-size: 16px;}
 .post-intro{
 	color: #4b5156;
 	font-size: 14px;
+	white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
 }
 
 .thumbnail{
