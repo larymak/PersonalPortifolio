@@ -1,9 +1,28 @@
 # PersonalPortifolio
-A personal portfolio project made with Html, CSS &amp; JavaScript
 
-It is a single page site with a link to post page.
-It has four themes enabled within it, you can switch to suit your needs.
+This personal portfolio project showcases my skills in HTML, CSS, &amp; JavaScript. It's a single-page website that features a link to my blog page
 
-See the live page [HERE](https://larymak.netlify.app/)
+## Key Features
 
-![](images/Capture.PNG)
+- **Four Themes** - The portfolio offers four customizable themes to match diverse preferences and needs.
+- **Live Page** - Explore the live version of the portfolio [HERE](https://larymak.netlify.app/).
+
+![](images/home-page.png)
+
+## Technologies Used
+
+- **HTML** - Structuring the content.
+- **CSS** - Styling and designing the site.
+- **JavaScript** - Adding interactivity to the site.
+
+## How to Use
+
+- Click the provided link above to explore the live portfolio.
+- Experiment with different themes by selecting your preferred option.
+- Navigate through the single-page layout and explore my work easily.
+
+## Future Improvements
+
+- Enhance responsiveness for various screen sizes.
+- Add more projects to the portfolio.
+- Improve accessibility and overall user experience.
