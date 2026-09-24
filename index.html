@@ -3,126 +3,411 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hillary Nyakundi is a Developer Relations professional and developer educator helping developers understand, adopt, and succeed with technical products.">
-  <meta name="theme-color" content="#f7f8fc">
-  <title>Hillary Nyakundi — Developer Relations &amp; Education</title>
+  <meta name="description" content="Hiwot Tariku — Information Technology graduate, IT professional, web developer and Cisco networking enthusiast based in Ethiopia.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Hiwot Tariku | IT Professional & Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="default.css">
   <style>
-    .featured-article{position:relative;background:linear-gradient(90deg,#171d35,#111526)}
-    .featured-article::before{content:"Featured";position:absolute;top:0;right:0;padding:6px 10px;background:var(--blue);color:#fff;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-    .featured-article h3{max-width:760px;font-size:clamp(23px,2.4vw,34px)}
-    .featured-article>a{border-color:#7188ee;background:#3155e71f;color:#dce3ff}
-    .featured-article>a:hover{border-color:var(--blue);background:var(--blue);color:#fff}
+    /* Portfolio upgrades */
+    :root{--blue:#5b73ff;--cyan:#55d6ff;--ink:#0b1020;--muted:#667085;--line:#e7eaf1}
+    html{scroll-behavior:smooth}
+    body{background:#f7f8fc;color:var(--ink)}
+    .site-header{backdrop-filter:blur(14px);background:rgba(247,248,252,.86);border-bottom:1px solid rgba(15,23,42,.07)}
+    .brand span{background:linear-gradient(135deg,var(--blue),#8b5cf6);color:#fff}
+    .hero{overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-180px;background:radial-gradient(circle,rgba(91,115,255,.18),transparent 68%);pointer-events:none}
+    .eyebrow{color:#5967a7!important;font-weight:700}
+    .hero h1{letter-spacing:-.055em}
+    .hero h1 span{background:linear-gradient(90deg,#536dff,#8b5cf6 60%,#08aeea);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-intro{max-width:760px}
+    .hero-actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .button{box-shadow:0 12px 28px rgba(50,70,180,.15)}
+    .social-row a{transition:.2s ease}
+    .social-row a:hover{transform:translateY(-2px)}
+    .portrait-frame{position:relative}
+    .portrait-frame:after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(91,115,255,.25);border-radius:inherit;z-index:-1}
+    .availability{box-shadow:0 10px 30px rgba(15,23,42,.13)}
+    .trust{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .wordmarks{display:flex;gap:12px;flex-wrap:wrap}
+    .wordmarks a{background:#f7f8fc!important;border:1px solid var(--line);border-radius:999px;padding:10px 15px!important}
+    .project{overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 22px 55px rgba(16,24,40,.11)}
+    .project-art{min-height:220px}
+    .project-meta span{background:#eef1ff!important;color:#4858b5!important}
+    .outcomes li::marker{color:var(--blue)}
+    .capability{border:1px solid var(--line);transition:.25s ease}
+    .capability:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(16,24,40,.08);border-color:#cfd6ff}
+    .capability h3{margin-bottom:10px}
+    .skills-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .skill-pill{font:500 12px var(--mono);padding:9px 12px;border:1px solid #dfe3ef;border-radius:999px;background:#fff}
+    .dark-section{background:#0b1020}
+    .dark-section .section-head h2,.dark-section .section-head p,.dark-section .kicker{color:#fff}
+    .article-list article{border-color:rgba(255,255,255,.12)}
+    .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .cert-card{padding:24px;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:rgba(255,255,255,.045)}
+    .cert-card span{font:11px var(--mono);color:#9facff;text-transform:uppercase;letter-spacing:.08em}
+    .cert-card h3{color:#fff;margin:12px 0 8px}
+    .cert-card p{color:#b7bfd4;margin:0}
+    .timeline{display:grid;gap:18px;margin-top:26px}
+    .timeline-item{display:grid;grid-template-columns:150px 1fr;gap:25px;padding:24px 0;border-top:1px solid var(--line)}
+    .timeline-item time{font:12px var(--mono);color:#68708a}
+    .timeline-item h3{margin:0 0 7px}
+    .timeline-item p{margin:0;color:#68708a}
+    .about-lead{font-size:clamp(22px,2.5vw,32px)!important;line-height:1.3}
+    .contact{background:linear-gradient(135deg,#0b1020,#17224a 65%,#263b9a)}
+    .contact-inner h2{letter-spacing:-.045em}
+    footer{background:#080c18}
+    @media(max-width:800px){
+      .cert-grid{grid-template-columns:1fr}
+      .timeline-item{grid-template-columns:1fr;gap:8px}
+    }
   </style>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Hillary Nyakundi, home"><span>HN</span> Hillary Nyakundi</a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
-      <nav id="site-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#about">About</a>
-        <a class="button button-small button-outline" href="mailto:larymak4@gmail.com?subject=CV%20request">Request CV</a>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#top" aria-label="Hiwot Tariku, home"><span>HT</span> HIWOT TARIKU</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Toggle navigation</span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#about">About</a>
+      <a class="button button-small button-outline" href="mailto:hiwititem@gmail.com?subject=CV%20Request">Request CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">IT PROFESSIONAL <i></i> WEB DEVELOPER <i></i> NETWORKING</p>
+      <h1>I build <span>modern digital solutions</span> for real-world needs.</h1>
+      <p class="hero-intro">
+        I'm <strong>Hiwot Tariku</strong>, an Information Technology graduate and IT professional from Ethiopia.
+        I develop responsive websites and web applications with <strong>React, Next.js, Laravel and Node.js</strong>,
+        while building practical networking skills through Cisco training in routing, switching, VLANs and network security.
+        My goal is to grow as a <strong>Network &amp; Software Engineer</strong>.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+        <a class="text-link" href="mailto:hiwititem@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="social-row" aria-label="Professional profiles">
+        <a href="https://github.com/hiwititem" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/hiwot-tariku/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+      </div>
     </div>
-  </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Developer Relations <i></i> Developer Education <i></i> Open Source</p>
-          <h1>I help developers <span>understand, adopt, and succeed</span> with technical products.</h1>
-          <p class="hero-intro">I'm Hillary Nyakundi, a Developer Relations professional, technical writer, and developer educator creating documentation, educational experiences, and technical communities that make technology easier to understand and use.</p>
-          <div class="hero-actions"><a class="button" href="#work">View my work <span aria-hidden="true">↘</span></a><a class="text-link" href="mailto:larymak4@gmail.com">Let's talk <span aria-hidden="true">↗</span></a></div>
-          <div class="social-row" aria-label="Professional profiles">
-            <a href="https://github.com/larymak" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-            <a href="https://www.linkedin.com/in/hillary-nyakundi/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-            <a href="https://www.freecodecamp.org/news/author/larymak/" target="_blank" rel="noreferrer">freeCodeCamp <span>↗</span></a>
+    <div class="hero-visual reveal">
+      <div class="portrait-frame">
+        <img src="images/mine.jpg" alt="Portrait of Hiwot Tariku" width="1000" height="1000">
+        <div class="availability"><span></span> Ethiopia · Open to opportunities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="trust-title">
+  <div class="container">
+    <div class="trust-row">
+      <p id="trust-title">Experience &amp; professional environments</p>
+      <div class="wordmarks">
+        <a href="#work">IBEX Technologies <span>↗</span></a>
+        <a href="#work">Caremark Clinic <span>↗</span></a>
+        <a href="#work">Jasmin Clinic <span>↗</span></a>
+        <a href="#certificates">Cisco Networking Academy <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><p class="kicker">01 / Selected work</p><h2>Built through practice.</h2></div>
+      <p>Real projects and practical experience across web development, IT support and networking.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="project project-featured reveal">
+        <div class="project-art art-blue">
+          <span class="terminal">Laravel · MySQL · Admin Panel<span class="cursor">_</span></span>
+          <strong>IBEX<br>Website</strong>
+          <small>Web Development</small>
+        </div>
+        <div class="project-body">
+          <div class="project-meta"><span>Full-Stack Development</span><span>Laravel</span></div>
+          <h3>IBEX Technologies &amp; Promotion PLC website</h3>
+          <p>Redesigned and developed the company website as a full-stack Laravel project, including responsive pages, database-driven content, authentication and an admin dashboard.</p>
+          <ul class="outcomes">
+            <li>Figma-based UI redesign</li>
+            <li>Laravel backend, controllers, models &amp; routes</li>
+            <li>MySQL database and dynamic content</li>
+            <li>Admin login and dashboard</li>
+          </ul>
+          <a href="https://github.com/hiwititem/Ibex-full-website" target="_blank" rel="noreferrer">View project on GitHub <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-art art-dark">
+          <span class="community-mark">CAREMARK<span></span></span>
+          <small>Internal Medicine Specialty Clinic</small>
+          <div class="nodes"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="project-body">
+          <div class="project-meta"><span>IT Support</span><span>Web / Systems</span></div>
+          <h3>Clinic IT &amp; systems support</h3>
+          <p>Practical experience supporting technology and day-to-day digital systems in a clinical work environment while continuing to develop software and networking skills.</p>
+          <div class="skills-strip">
+            <span class="skill-pill">IT Support</span><span class="skill-pill">Troubleshooting</span><span class="skill-pill">Systems</span>
           </div>
         </div>
-        <div class="hero-visual reveal">
-          <div class="portrait-frame"><img src="images/lary.png" alt="Portrait of Hillary Nyakundi" width="1000" height="1000"><div class="availability"><span></span> Nairobi, Kenya · Open to global roles</div></div>
-          <div class="code-note" aria-hidden="true"><span>01</span> education();<br><span>02</span> documentation();<br><span>03</span> community();</div>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <section class="trust" aria-labelledby="trust-title">
-      <div class="container">
-        <div class="trust-row">
-          <p id="trust-title">Worked with &amp; contributed to</p>
-          <div class="wordmarks">
-            <a href="https://www.freecodecamp.org/news/author/larymak/" target="_blank" rel="noreferrer">freeCodeCamp <span>↗</span></a>
-            <a href="https://www.writethedocs.org/meetups/" target="_blank" rel="noreferrer">Write the Docs <span>↗</span></a>
-            <a href="https://www.meetup.com/wtd-kenya/" target="_blank" rel="noreferrer">WTD Kenya Meetup <span>↗</span></a>
-            <a href="https://talk.openmrs.org/t/openmrs-translation-documentation/43659" target="_blank" rel="noreferrer">OpenMRS <span>↗</span></a>
+      <article class="project reveal">
+        <div class="project-art art-mint">
+          <span class="health-cross">+</span><strong>Jasmin</strong><small>Multispeciality Clinic</small>
+        </div>
+        <div class="project-body">
+          <div class="project-meta"><span>Professional Experience</span><span>Customer Service</span></div>
+          <h3>Front-office &amp; operational experience</h3>
+          <p>Experience working in a healthcare environment, strengthening communication, organization, teamwork and day-to-day professional skills.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <time>2025 · Internship</time>
+        <div><h3>Web Developer — IBEX Technologies &amp; Promotion PLC</h3><p>Developed and redesigned the company website using Laravel, MySQL, HTML, CSS and JavaScript, with an admin dashboard and dynamic content.</p></div>
+      </div>
+      <div class="timeline-item">
+        <time>2026 · Present</time>
+        <div><h3>IT Professional</h3><p>Working in a professional environment while continuing to build stronger software development, IT support and networking capabilities.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section capabilities" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><p class="kicker">02 / Skills</p><h2>What I work with.</h2></div>
+      <p>A practical combination of software development, databases, IT support and Cisco networking.</p>
+    </div>
+
+    <div class="capability-grid">
+      <article class="capability reveal">
+        <span>01</span><h3>Web Development</h3>
+        <p>Building responsive, modern websites and full-stack applications.</p>
+        <ul><li>React &amp; Next.js</li><li>Laravel &amp; Node.js</li><li>HTML, CSS &amp; JavaScript</li><li>Tailwind CSS</li></ul>
+      </article>
+      <article class="capability reveal">
+        <span>02</span><h3>Backend &amp; Databases</h3>
+        <p>Creating APIs, database-driven systems and application backends.</p>
+        <ul><li>PHP / Laravel</li><li>Node.js / Express</li><li>MySQL &amp; SQLite</li><li>Supabase</li></ul>
+      </article>
+      <article class="capability reveal">
+        <span>03</span><h3>Networking</h3>
+        <p>Hands-on Cisco networking knowledge from training and Packet Tracer practice.</p>
+        <ul><li>Routing &amp; switching</li><li>VLANs &amp; trunking</li><li>Subnetting</li><li>Network security</li></ul>
+      </article>
+      <article class="capability reveal">
+        <span>04</span><h3>IT &amp; Tools</h3>
+        <p>Tools and workflows I use to build, troubleshoot and manage projects.</p>
+        <ul><li>Git &amp; GitHub</li><li>VS Code &amp; XAMPP</li><li>Windows Server</li><li>Cisco Packet Tracer</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section" id="certificates">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><p class="kicker">03 / Certificates</p><h2>Learning backed by practice.</h2></div>
+      <p>My networking foundation comes from Cisco Networking Academy training at Jimma University.</p>
+    </div>
+
+    <div class="cert-grid">
+      <article class="cert-card reveal">
+        <span>Cisco Networking Academy · 70 Hrs</span>
+        <h3>Introduction to Networks</h3>
+        <p>Networking fundamentals, devices, protocols, addressing and basic connectivity.</p>
+      </article>
+      <article class="cert-card reveal">
+        <span>Cisco Networking Academy · 70 Hrs</span>
+        <h3>Switching, Routing &amp; Wireless Essentials</h3>
+        <p>Switching, routing, VLANs, wireless concepts and network configuration.</p>
+      </article>
+      <article class="cert-card reveal">
+        <span>Cisco Networking Academy · 70 Hrs</span>
+        <h3>Enterprise Networking, Security &amp; Automation</h3>
+        <p>Enterprise networking concepts, security fundamentals and automation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div>
+      <p class="kicker">04 / About me</p>
+      <h2>Information Technology graduate.<br>IT professional.<br>Future Network &amp; Software Engineer.</h2>
+    </div>
+    <div>
+      <p class="about-lead">I enjoy turning ideas and technical requirements into useful, reliable digital solutions.</p>
+      <p>I graduated from <strong>Jimma University</strong> with a Bachelor of Information Technology. My background combines web development, databases, IT support and Cisco networking. I enjoy learning by building real projects and solving practical problems.</p>
+      <p>I am currently focused on growing professionally, strengthening my engineering skills, and contributing to teams where I can learn, build and create measurable value.</p>
+      <div class="education"><span>Education</span><strong>Bachelor of Information Technology</strong><small>Jimma University · Jimma Institute of Technology</small></div>
+      <a class="text-link" href="mailto:hiwititem@gmail.com?subject=CV%20Request">Request my CV <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <p class="kicker">05 / Let's connect</p>
+    <h2>Let's build something<br>useful together.</h2>
+    <p>I'm open to opportunities in web development, IT support, networking and software engineering, as well as projects where I can learn and contribute.</p>
+    <div>
+      <a class="button button-light" href="mailto:hiwititem@gmail.com">Email me <span>↗</span></a>
+      <a href="https://www.linkedin.com/in/hiwot-tariku/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- RECOMMENDATION LETTERS -->
+<section class="section recommendations" id="recommendations">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">06 / Recommendations</p>
+        <h2>What others say about my work.</h2>
+      </div>
+
+      <p>
+        Professional recommendations that reflect my work ethic,
+        technical skills, learning attitude, and contribution to
+        professional projects.
+      </p>
+    </div>
+
+    <div class="recommendation-grid">
+
+      <!-- Recommendation 1 -->
+      <article class="recommendation-card reveal">
+        <div class="recommendation-icon">
+          ✦
+        </div>
+
+        <div class="recommendation-content">
+          <span class="recommendation-label">
+            PROFESSIONAL RECOMMENDATION
+          </span>
+
+          <h3>Recommendation Letter</h3>
+
+          <p>
+            A professional recommendation highlighting my skills,
+            work ethic, responsibility, and contribution during my
+            professional experience.
+          </p>
+
+          <div class="recommendation-actions">
+            <a
+              class="button button-small"
+              href="files/recommendation-letter-1.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Letter ↗
+            </a>
+
+            <a
+              class="text-link"
+              href="files/recommendation-letter-1.pdf"
+              download
+            >
+              Download ↓
+            </a>
           </div>
         </div>
-        <div class="github-proof">
-          <div class="github-intro"><span class="github-icon" aria-hidden="true">&lt;/&gt;</span><div><small>Open-source footprint</small><strong>Built and shared on GitHub</strong></div></div>
-          <div class="github-stats" aria-label="Open-source project highlight"><span><strong>2.4k</strong> stars on Python Project Scripts</span></div>
-          <div class="github-links"><a href="https://github.com/larymak/Python-project-Scripts" target="_blank" rel="noreferrer">Python Project Scripts ↗</a><a href="https://github.com/larymak/Awesome-Open-Source-Programs" target="_blank" rel="noreferrer">Open Source Programs ↗</a><a href="https://github.com/larymak" target="_blank" rel="noreferrer">View GitHub ↗</a></div>
+      </article>
+
+
+      <!-- Recommendation 2 -->
+      <article class="recommendation-card reveal">
+        <div class="recommendation-icon">
+          ✦
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-head reveal"><div><p class="kicker">01 / Selected work</p><h2>Proof through practice.</h2></div><p>Documentation, developer education, open-source initiatives, and community programs designed to help developers learn and build.</p></div>
-        <div class="work-grid">
-          <article class="project project-featured reveal"><div class="project-art art-blue"><span class="terminal">$ learn --by-building<span class="cursor">_</span></span><strong>free<br>CodeCamp</strong><small>Open-source learning</small></div><div class="project-body"><div class="project-meta"><span>Developer Education</span><span>Open Source</span></div><h3>Curriculum for a global developer community</h3><p>Contributing educational content and curriculum that turns technical concepts into practical, accessible learning experiences.</p><ul class="outcomes"><li>Curriculum development</li><li>Technical education</li><li>Engineering collaboration</li></ul><a href="https://www.freecodecamp.org/news/author/larymak/" target="_blank" rel="noreferrer">Explore the work <span>↗</span></a></div></article>
-          <article class="project reveal"><div class="project-art art-dark"><span class="community-mark">WTD<span>KE</span></span><div class="nodes"><i></i><i></i><i></i><i></i></div></div><div class="project-body"><div class="project-meta"><span>Developer Relations</span><span>Community</span></div><h3>Write the Docs Kenya</h3><p>Building a sustainable technical communication community through programs, workshops, partnerships, and shared learning.</p><div class="project-links speaking-actions"><a class="text-link" href="https://www.writethedocs.org/meetups/" target="_blank" rel="noreferrer">Organizer listing <span>↗</span></a><a class="text-link" href="https://www.meetup.com/wtd-kenya/" target="_blank" rel="noreferrer">Kenya Meetup <span>↗</span></a></div></div></article>
-          <article class="project reveal"><div class="project-art art-mint"><span class="health-cross">+</span><strong>OpenMRS</strong><small>Open-source health technology</small></div><div class="project-body"><div class="project-meta"><span>Documentation</span><span>Localization</span></div><h3>Translation documentation for a global health platform</h3><p>Created step-by-step guidance for translation volunteers and implementers, including contribution workflows, peer review, setup, and localization best practices.</p><a href="https://talk.openmrs.org/t/openmrs-translation-documentation/43659" target="_blank" rel="noreferrer">View the documentation work <span>↗</span></a></div></article>
-        </div>
-      </div>
-    </section>
+        <div class="recommendation-content">
+          <span class="recommendation-label">
+            PROFESSIONAL RECOMMENDATION
+          </span>
 
-    <section class="impact section-tight"><div class="container"><div class="impact-title"><p class="kicker">Impact at a glance</p><p>Work measured by reach, participation, and sustained developer learning.</p></div><div class="metrics"><div><strong>5+ <em>years</em></strong><span>Across developer education, technical content, open source &amp; community</span></div><div><strong>2,000<em>+</em></strong><span>Technical professionals supported through community programs</span></div><div><strong>Global</strong><span>Developer audiences reached through open learning ecosystems</span></div></div></div></section>
+          <h3>Recommendation Letter</h3>
 
-    <section class="section capabilities"><div class="container"><div class="section-head reveal"><div><p class="kicker">02 / Capabilities</p><h2>Connecting product, knowledge, and community.</h2></div></div><div class="capability-grid">
-      <article class="capability reveal"><span>01</span><h3>Developer Relations</h3><p>Helping developer-facing organizations connect products with the people building with them.</p><ul><li>Developer advocacy</li><li>Product education</li><li>Developer onboarding</li></ul></article>
-      <article class="capability reveal"><span>02</span><h3>Developer Education</h3><p>Turning complex technologies into structured, useful learning experiences.</p><ul><li>Curriculum design</li><li>Tutorials &amp; workshops</li><li>Learning paths</li></ul></article>
-      <article class="capability reveal"><span>03</span><h3>Technical Documentation</h3><p>Making technical products easier to understand, navigate, and use.</p><ul><li>API documentation</li><li>Docs-as-code</li><li>Content strategy</li></ul></article>
-      <article class="capability reveal"><span>04</span><h3>Community &amp; Open Source</h3><p>Building spaces where developers learn, contribute, and collaborate.</p><ul><li>Community programs</li><li>Contributor engagement</li><li>Speaking</li></ul></article>
-    </div></div></section>
+          <p>
+            A professional reference recognizing my professionalism,
+            dedication, technical abilities, and commitment to learning
+            and growth.
+          </p>
 
-    <section class="section dark-section" id="writing"><div class="container"><div class="section-head reveal"><div><p class="kicker">03 / Technical writing</p><h2>Making complex ideas usable.</h2></div><p>Practical writing on programming, developer tools, open source, and the workflows developers use every day.</p></div><div class="article-list" id="article-list" aria-live="polite"><article class="featured-article"><div><span>Top-performing guide · freeCodeCamp</span><h3>How to Contribute to Open Source Projects — A Beginner's Guide</h3><p>A practical, search-friendly introduction to finding projects, understanding community roles, and completing the fork-to-pull-request workflow.</p></div><a href="https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/" target="_blank" rel="noreferrer">Read the guide ↗</a></article><article><div><span>Published book chapter · 2023</span><h3>Fostering FOSS Communities: A Guide for Newcomers</h3><p>Co-authored research on documentation, mentorship, and inclusive environments that help new contributors participate in open source.</p></div><a href="https://www.igi-global.com/book/business-models-strategies-open-source/292090?f=hardcover-e-book" target="_blank" rel="noreferrer">View the book ↗</a></article><article><div><span>More writing</span><h3>Developer tutorials and community perspectives</h3><p>An ongoing archive of practical learning resources.</p></div><a href="https://www.freecodecamp.org/news/author/larymak/" target="_blank" rel="noreferrer">View all on freeCodeCamp ↗</a></article></div></div></section>
+          <div class="recommendation-actions">
+            <a
+              class="button button-small"
+              href="files/recommendation-letter-2.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Letter ↗
+            </a>
 
-    <section class="section speaking" id="speaking">
-      <div class="container">
-        <div class="section-head reveal"><div><p class="kicker">04 / Speaking &amp; workshops</p><h2>Ideas made to be shared.</h2></div><p>I speak and facilitate workshops on developer education, technical documentation, open source, developer communities, and building better developer experiences.</p></div>
-        <div class="speaking-showcase">
-          <div class="stage-graphic reveal" aria-label="Speaking topics: documentation, community, open source, and localization">
-            <div class="sound-waves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="microphone" aria-hidden="true"><span></span></div>
-            <p>Documentation <span>·</span> Community <span>·</span><br>Open Source <span>·</span> Localization</p><small>Available for talks, workshops &amp; panels</small>
-          </div>
-          <div class="appearance-list reveal">
-            <div class="appearance-heading"><span>Selected appearances</span></div>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>DevFest Pwani</strong><small>Mombasa, Kenya</small></div><span aria-hidden="true">↗</span></a>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>DevFest Kisii</strong><small>Kisii, Kenya</small></div><span aria-hidden="true">↗</span></a>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>Africa's Talking Summit</strong><small>Nairobi, Kenya</small></div><span aria-hidden="true">↗</span></a>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>Open Source for Everyone</strong><small>Eldoret, Kenya</small></div><span aria-hidden="true">↗</span></a>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>Google I/O Extended Pwani</strong><small>Mombasa, Kenya</small></div><span aria-hidden="true">↗</span></a>
-            <a href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer"><div><strong>DevFest Nyeri</strong><small>The future of localization in the tech industry</small></div><span aria-hidden="true">↗</span></a>
+            <a
+              class="text-link"
+              href="files/recommendation-letter-2.pdf"
+              download
+            >
+              Download ↓
+            </a>
           </div>
         </div>
-        <div class="speaking-actions speaking-cta"><a class="button button-outline" href="mailto:larymak4@gmail.com?subject=Speaking%20invitation">Invite me to speak</a><a class="text-link" href="https://sessionize.com/larymak/" target="_blank" rel="noreferrer">View full speaker profile <span>↗</span></a></div>
-      </div>
-    </section>
+      </article>
 
-    <section class="section recognition"><div class="container"><div class="section-head"><div><p class="kicker">05 / Recognition</p><h2>Recognized for the work.</h2></div></div><div class="recognition-grid"><a class="recognition-card" href="https://globalwritersawards.document360.com/c/document360-global-writers-awards-2025/winners" target="_blank" rel="noreferrer"><span>2025 · View award ↗</span><h3>Document360 Global Writers Awards</h3><p>Recognition in technical writing and developer documentation.</p></a><article><span>2025</span><h3>MLH Top 50</h3><p>Recognition for impact in developer education, mentorship, and learning communities.</p></article><article><span>2022</span><h3>Open-Source Writer of the Year</h3><p>Recognition for accessible technical education and open-source writing.</p></article></div></div></section>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container footer-grid">
+    <a class="brand brand-light" href="#top"><span>HT</span> Hiwot Tariku</a>
+    <p>IT Professional · Web Developer · Networking<br>Ethiopia · Open to opportunities</p>
+    <div>
+      <a href="https://github.com/hiwititem" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/hiwot-tariku/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Hiwot Tariku</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
 
-    <section class="section about" id="about"><div class="container about-grid"><div><p class="kicker">06 / About</p><h2>Developer educator.<br>Community builder.<br>Technical communicator.</h2></div><div><p class="about-lead">My work sits at the intersection of computer science, developer relations, technical writing, developer education, and open source.</p><p>I care about removing the friction between a technical product and the person trying to use it—through clearer documentation, purposeful learning, and communities built to last.</p><div class="education"><span>Education</span><strong>Bachelor of Computer Science</strong><small>St. Paul's University</small></div><a class="text-link" href="mailto:larymak4@gmail.com?subject=CV%20request">Request my CV <span>↗</span></a></div></div></section>
-
-    <section class="contact" id="contact"><div class="container contact-inner"><p class="kicker">Start a conversation</p><h2>Let's build better<br>developer experiences.</h2><p>I'm interested in Developer Relations, Developer Education, Developer Experience, technical documentation, speaking, and open-source opportunities.</p><div><a class="button button-light" href="mailto:larymak4@gmail.com">Email me <span>↗</span></a><a href="https://www.linkedin.com/in/hillary-nyakundi/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div></div></section>
-  </main>
-
-  <footer><div class="container footer-grid"><a class="brand brand-light" href="#top"><span>HN</span> Hillary Nyakundi</a><p>Developer Relations · Developer Education<br>Nairobi, Kenya · Working globally</p><div><a href="https://github.com/larymak">GitHub ↗</a><a href="https://www.linkedin.com/in/hillary-nyakundi/">LinkedIn ↗</a><a href="https://sessionize.com/larymak/">Sessionize ↗</a><a href="https://www.freecodecamp.org/news/author/larymak/">freeCodeCamp ↗</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Hillary Nyakundi</span><a href="#top">Back to top ↑</a></div></footer>
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
